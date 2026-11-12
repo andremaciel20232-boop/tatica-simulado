@@ -391,6 +391,31 @@ footer details.termos div p{margin-top:8px;text-align:left}
 @media(max-width:719px){.dl3-h h2{font-size:19px;letter-spacing:0}}
 @media(min-width:720px){.dl3-g{grid-template-columns:repeat(3,1fr)}.dz{grid-template-columns:1fr;justify-items:center;text-align:center;padding:22px 14px 20px;gap:10px}.dz-ic{width:72px;height:72px}.dz-t b{font-size:24px}.dl3-h h2{font-size:28px}}
 .entrega{font-size:13px;line-height:1.45;color:#4A5B70;background:#FBF6EA;border-left:3px solid #C9973F;border-radius:0 8px 8px 0;padding:8px 10px;margin-top:8px}
+
+/* ===== chat de suporte (Tawk.to, carregado só ao clicar) ===== */
+.chatfab{position:fixed;right:16px;bottom:96px;z-index:40;display:flex;align-items:center;gap:12px;border:1px solid rgba(226,182,92,.65);cursor:pointer;font:inherit;color:#fff;background:linear-gradient(180deg,#14305A,#0B1830);padding:6px 20px 6px 6px;border-radius:99px;box-shadow:0 8px 22px rgba(0,0,0,.5);text-align:left;max-width:calc(100vw - 32px)}
+.chatfab:hover{border-color:var(--gold2)}
+.cf-av{position:relative;flex:none;width:56px;height:56px;border-radius:50%;background:linear-gradient(180deg,#F2CF7E,#C9973F);display:block}
+.cf-av svg{width:56px;height:56px;display:block}
+.cf-av:after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 0 rgba(61,220,132,.55);animation:cfp 2.2s infinite}
+.cf-dot{position:absolute;right:1px;bottom:2px;width:14px;height:14px;border-radius:50%;background:#3DDC84;border:2px solid #0B1830;z-index:1}
+.cf-tx{display:block;line-height:1.15}
+.cf-tx b{display:block;font-size:16px;color:#fff;letter-spacing:.01em}
+.cf-tx small{display:block;font-size:13px;color:var(--gold2);margin-top:2px}
+.chatnudge{position:fixed;right:16px;bottom:166px;z-index:41;max-width:min(260px,calc(100vw - 32px));background:#fff;color:#10203A;border-radius:14px 14px 4px 14px;padding:12px 34px 12px 14px;font-size:15px;line-height:1.35;box-shadow:0 8px 24px rgba(0,0,0,.4);cursor:pointer;animation:cfin .35s ease-out}
+.chatnudge .nx{position:absolute;top:4px;right:6px;border:0;background:none;color:#5B6B7E;font-size:20px;line-height:1;cursor:pointer;padding:2px 6px}
+.chatnudge[hidden]{display:none}
+@keyframes cfp{0%{box-shadow:0 0 0 0 rgba(61,220,132,.55)}70%{box-shadow:0 0 0 12px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
+@keyframes cfin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.cf-av:after,.chatnudge{animation:none}}
+.chatfab[hidden],.chatbox[hidden]{display:none}
+@media(min-width:900px){.chatfab{bottom:164px}.chatbox{bottom:240px}.chatnudge{bottom:240px}}
+.chatbox{position:fixed;right:16px;bottom:172px;z-index:41;width:min(330px,calc(100vw - 32px));background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.chatbox h4{font-size:17px;color:var(--navy);margin:0 24px 6px 0}
+.chatbox p{font-size:14.5px;color:var(--mut);margin:0 0 12px}
+.chatbox p a{color:var(--navy2);text-decoration:underline}
+.chatbox .go{display:block;width:100%;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:16px;color:#1A1306;background:linear-gradient(180deg,#F2CF7E,#C9973F);padding:12px 18px;border-radius:12px}
+.chatbox .x{position:absolute;top:8px;right:10px;border:0;background:none;color:var(--mut);font-size:24px;line-height:1;cursor:pointer;padding:4px 8px}
 </style>
 </head>
 <body>
@@ -472,7 +497,7 @@ footer details.termos div p{margin-top:8px;text-align:left}
       <div class="data">Instituto AOCP · prova objetiva e redação em 28/02/2027</div>
       <ul class="check"><li>1 amostra demonstrativa, em formato completo, para você conhecer o material antes de adquirir</li><li>4 simulados completos de 60 questões, com cartão-resposta</li><li>4 gabaritos pós-simulado, comentados <b>alternativa por alternativa</b></li><li>4 propostas de redação inéditas, com textos de apoio</li><li>Acesso ao Portal do Aluno, com login e senha, para tirar dúvidas e baixar os materiais do seu pacote</li><li>Cópia personalizada em PDF</li></ul>
       <div class="pr"><b class="goldtx">R$ 39,90</b><span>pagamento único</span></div>
-      <div class="pay">Aceitamos Pix, boleto e cartão*</div><div class="entrega"><b>Liberação do material:</b> Simulados 00 e 01 imediatamente após a confirmação da compra; Simulados 02 ao 05 em até 8 dias.</div>
+      <div class="pay">Aceitamos Pix, boleto e cartão*</div><div class="entrega"><b>Liberação do material:</b> Simulados 00 e 01 imediatamente após a confirmação da compra; Simulados 02 ao 04 em até 8 dias.</div>
       <div class="acts"><a class="a2" data-amostra="cbmpe" href="#">Baixar amostra</a><a class="a1" data-buy="cbmpe" href="#">Comprar</a></div>
       <div class="hm">🔒 Pagamento seguro pela Hotmart</div>
     </div>
@@ -482,7 +507,7 @@ footer details.termos div p{margin-top:8px;text-align:left}
       <div class="data">Instituto AOCP · prova objetiva e redação em 21/02/2027</div>
       <ul class="check"><li>1 amostra demonstrativa, em formato completo, para você conhecer o material antes de adquirir</li><li>4 simulados completos de 60 questões, com cartão-resposta</li><li>4 gabaritos pós-simulado, comentados <b>alternativa por alternativa</b></li><li>4 propostas de redação inéditas, com textos de apoio</li><li>Acesso ao Portal do Aluno, com login e senha, para tirar dúvidas e baixar os materiais do seu pacote</li><li>Cópia personalizada em PDF</li></ul>
       <div class="pr"><b class="goldtx">R$ 39,90</b><span>pagamento único</span></div>
-      <div class="pay">Aceitamos Pix, boleto e cartão*</div><div class="entrega"><b>Liberação do material:</b> Simulados 00 e 01 imediatamente após a confirmação da compra; Simulados 02 ao 05 em até 8 dias.</div>
+      <div class="pay">Aceitamos Pix, boleto e cartão*</div><div class="entrega"><b>Liberação do material:</b> Simulados 00 e 01 imediatamente após a confirmação da compra; Simulados 02 ao 04 em até 8 dias.</div>
       <div class="acts"><a class="a2" data-amostra="pmpe" href="#">Baixar amostra</a><a class="a1" data-buy="pmpe" href="#">Comprar</a></div>
       <div class="hm">🔒 Pagamento seguro pela Hotmart</div>
     </div>
@@ -568,7 +593,7 @@ footer details.termos div p{margin-top:8px;text-align:left}
   <h2>Perguntas frequentes</h2>
   <details><summary>Como recebo o material?</summary><p>Depois da confirmação do pagamento pela Hotmart, você recebe o acesso no e-mail cadastrado na compra. O material também fica disponível no <a href="https://andremaciel20232-boop.github.io/Portal-do-Aluno-Tatica-Simulados/" target="_blank" rel="noopener">Portal do Aluno</a>.</p></details>
   <details><summary>Quais são as formas de pagamento?</summary><p>Pix, boleto ou cartão de crédito de qualquer bandeira, em até 3x, com o acréscimo de parcelamento da Hotmart. O pagamento é processado pela Hotmart.</p></details>
-  <details><summary>Quando recebo os simulados?</summary><p>Os Simulados 00 e 01 ficam disponíveis logo após a confirmação da compra. Os Simulados 02 ao 05 são liberados em até 8 dias, pelo mesmo acesso da Hotmart. O cronograma faz parte da proteção do material: sem ele, seria possível comprar, consumir tudo e pedir reembolso dentro dos 7 dias.</p></details>
+  <details><summary>Quando recebo os simulados?</summary><p>Os Simulados 00 e 01 ficam disponíveis logo após a confirmação da compra. Os Simulados 02 ao 04 são liberados em até 8 dias, pelo mesmo acesso da Hotmart. O cronograma programado faz parte da proteção do material.</p></details>
   <details><summary>Posso pedir reembolso?</summary><p>Sim. Você tem 7 dias corridos após a compra para desistir, conforme o art. 49 do Código de Defesa do Consumidor.</p></details>
   <details><summary>Posso compartilhar o material com colegas?</summary><p>Não. A cópia é pessoal e identificada. O repasse é proibido e sujeito às sanções previstas na Lei 9.610/98.</p></details>
   <details><summary>Os simulados seguem o edital atual?</summary><p>Sim. O conteúdo, o número de questões e as regras de cada prova saem do edital de abertura do concurso e das retificações que conferimos. As fontes de cada cargo estão listadas na seção “Feito a partir do edital”.</p></details>
@@ -578,7 +603,15 @@ footer details.termos div p{margin-top:8px;text-align:left}
 
 </main>
 
-<a class="wa" href="https://wa.me/5581995444330?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20simulados%20da%20T%C3%A1tica." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5a.6.6 0 0 0 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .8 2.4.7 2.9.6a2.4 2.4 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c0-.1-.3-.2-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.3 4.6zm8.4-18.2A11.8 11.8 0 0 0 1.8 17.8L.1 24l6.4-1.7a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.6z"/></svg></a>
+<a class="wa" href="https://wa.me/5581989934062?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20simulados%20da%20T%C3%A1tica." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5a.6.6 0 0 0 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .8 2.4.7 2.9.6a2.4 2.4 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c0-.1-.3-.2-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.3 4.6zm8.4-18.2A11.8 11.8 0 0 0 1.8 17.8L.1 24l6.4-1.7a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.6z"/></svg></a>
+<button type="button" class="chatfab" id="chatFab" hidden aria-haspopup="dialog" aria-controls="chatBox"><span class="cf-av"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><clipPath id="cfc"><circle cx="32" cy="32" r="32"/></clipPath></defs><g clip-path="url(#cfc)"><rect width="64" height="64" fill="#F2CF7E"/><path d="M6 66c0-14 11-21 26-21s26 7 26 21z" fill="#1F6FB8"/><path d="M26 44h12v7c0 3-3 5-6 5s-6-2-6-5z" fill="#E9B48C"/><ellipse cx="32" cy="30" rx="11" ry="13" fill="#F6CDAA"/><path d="M20 29c-1-12 6-18 13-18 8 0 13 6 11 18-3-5-6-8-11-9-6 1-10 4-13 9z" fill="#22364F"/><path d="M17 31c0-14 6-22 15-22s15 8 15 22" fill="none" stroke="#0B1830" stroke-width="2.6" stroke-linecap="round"/><rect x="13" y="27" width="6" height="11" rx="3" fill="#13C4B4" stroke="#0B1830" stroke-width="1.6"/><rect x="45" y="27" width="6" height="11" rx="3" fill="#13C4B4" stroke="#0B1830" stroke-width="1.6"/><path d="M48 37c0 6-5 9-11 9" fill="none" stroke="#0B1830" stroke-width="1.8" stroke-linecap="round"/><rect x="31" y="43" width="8" height="4" rx="2" fill="#E2B65C" stroke="#0B1830" stroke-width="1.3"/></g></svg><i class="cf-dot" id="cfDot"></i></span><span class="cf-tx"><b id="cfT1">Atendimento online</b><small id="cfT2">Tire suas dúvidas agora</small></span></button>
+<div class="chatnudge" id="chatNudge" hidden role="status">Olá! Posso ajudar com alguma dúvida sobre os pacotes?<button type="button" class="nx" id="nudgeX" aria-label="Fechar aviso">×</button></div>
+<div class="chatbox" id="chatBox" role="dialog" aria-label="Chat de suporte" hidden>
+  <button type="button" class="x" id="chatX" aria-label="Fechar">×</button>
+  <h4>Chat de suporte</h4>
+  <p>Ao iniciar, você será atendido pela plataforma Tawk.to, que pode usar cookies e registrar dados do seu acesso. Não envie CPF, senhas ou dados de cartão. <a href="#privacidade" id="chatPriv">Política de privacidade</a></p>
+  <button type="button" class="go" id="chatGo">Iniciar conversa</button>
+</div>
 
 <div class="sticky">
   <div class="pp"><small>cada pacote</small>R$ 39,90</div>
@@ -587,18 +620,29 @@ footer details.termos div p{margin-top:8px;text-align:left}
 
 <footer><div class="wrap">
   <p><strong>Tática Simulados</strong> · Material de estudo independente, sem vínculo com o CBM-PE, a PM-PE, a PC-PE, o Instituto AOCP ou o Cebraspe.</p>
-  <p style="margin-top:6px">WhatsApp: <a href="https://wa.me/5581995444330">(81) 99544-4330</a></p>
-  <p style="margin-top:8px"><a href="https://andremaciel20232-boop.github.io/Portal-do-Aluno-Tatica-Simulados/" target="_blank" rel="noopener">Portal do Aluno</a> · <a href="https://wa.me/5581995444330">Contato</a></p>
+  <p style="margin-top:6px">WhatsApp: <a href="https://wa.me/5581989934062">(81) 98993-4062</a></p>
+  <p style="margin-top:8px"><a href="https://andremaciel20232-boop.github.io/Portal-do-Aluno-Tatica-Simulados/" target="_blank" rel="noopener">Portal do Aluno</a> · <a href="https://wa.me/5581989934062" data-chat>Contato</a></p>
   <details class="termos"><summary>Termos de uso</summary><div>
 <p><b>1. Uso individual.</b> Os materiais da Tática Simulados são de uso pessoal e intransferível de quem comprou. Cada cópia é personalizada e identifica o comprador.</p>
 <p><b>2. Direitos autorais.</b> As questões, os comentários e os temas de redação são inéditos e protegidos pela Lei nº 9.610/1998. É proibido copiar, revender, compartilhar ou publicar o material, no todo ou em parte.</p>
 <p><b>3. Compra e cadastro.</b> O pagamento e o cadastro são feitos na Hotmart. Informe nome e e-mail corretos, pois o material e o acesso ao Portal do Aluno são enviados para o e-mail da compra.</p>
-<p><b>4. Leitura da descrição.</b> Antes de comprar, leia a descrição do pacote e, se quiser, baixe a amostra. Dúvidas podem ser tiradas pelo WhatsApp.</p>
+<p><b>4. Leitura da descrição.</b> Antes de comprar, leia a descrição do pacote e, se quiser, baixe a amostra. Dúvidas podem ser tiradas pelo chat de suporte do site.</p>
 <p><b>5. Desistência e reembolso.</b> Você pode desistir da compra em até 7 dias corridos, conforme o art. 49 do Código de Defesa do Consumidor. O pedido é feito pela própria Hotmart, que devolve o valor pela mesma forma de pagamento.</p>
 <p><b>6. Material independente.</b> A Tática Simulados não tem vínculo com o CBM-PE, a PM-PE, a PC-PE, o Instituto AOCP ou o Cebraspe, e não garante aprovação.</p>
 <p><b>7. Alterações.</b> Preços, pacotes e estes termos podem ser atualizados. Vale a versão publicada nesta página na data da compra.</p>
 </div></details>
-  <p style="margin-top:8px">Este site não coleta dados pessoais. O pagamento e o cadastro são feitos na Hotmart.</p>
+
+  <details class="termos" id="privacidade"><summary>Política de privacidade (LGPD)</summary><div>
+<p><b>1. Quem somos.</b> A Tática Simulados é a responsável (controladora) pelos dados tratados neste site, nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
+<p><b>2. O que o site faz sozinho.</b> Este site não tem cadastro, formulário, anúncios nem ferramentas de análise de visitas. Ele é hospedado no GitHub Pages, que pode registrar dados técnicos de acesso, como o endereço IP, conforme a política do próprio GitHub.</p>
+<p><b>3. Chat de suporte.</b> O chat só é carregado quando você clica em "Iniciar conversa". A partir daí, a plataforma Tawk.to trata o que você escrever (mensagens e, se informar, nome e e-mail) e dados técnicos do acesso, como endereço IP, navegador, localização aproximada e páginas visitadas, além de cookies da ferramenta. Esses dados podem ser armazenados em servidores fora do Brasil (transferência internacional, art. 33 da LGPD).</p>
+<p><b>4. Para que usamos.</b> Apenas para responder a sua dúvida sobre os pacotes e prestar suporte. A base legal é o seu consentimento, dado ao iniciar a conversa (art. 7º, I). Não usamos as conversas para publicidade e não vendemos dados.</p>
+<p><b>5. O que não enviar.</b> Não informe CPF, senhas, dados de cartão ou de conta bancária no chat. Pagamentos e cadastro são feitos na Hotmart, que tem sua própria política de privacidade.</p>
+<p><b>6. Por quanto tempo.</b> Guardamos a conversa pelo tempo necessário para atender você e comprovar o atendimento, e depois a eliminamos, salvo obrigação legal.</p>
+<p><b>7. Seus direitos.</b> Você pode pedir confirmação do tratamento, acesso, correção, eliminação dos dados, informação sobre com quem compartilhamos e revogação do consentimento (art. 18 da LGPD). Faça o pedido pelo próprio chat de suporte. Você também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+<p><b>8. Alterações.</b> Esta política pode ser atualizada. Vale a versão publicada nesta página.</p>
+</div></details>
+  <p style="margin-top:8px">Este site não tem cadastro nem usa cookies de publicidade ou de análise. O pagamento e o cadastro são feitos na Hotmart. Se você usar o chat de suporte, veja a política de privacidade acima.</p>
 </div></footer>
 
 <script>
@@ -645,11 +689,15 @@ document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener
 /* ===================== CONFIGURAÇÃO (edite só aqui) =====================
    Cole entre as aspas o link de checkout de cada produto na Hotmart
    (ex.: https://pay.hotmart.com/XXXXXXXX) e o link do PDF da amostra de cada pacote.
-   Enquanto um link estiver vazio, o botão abre o WhatsApp com a mensagem pronta. */
+   Enquanto um link estiver vazio, o botão abre o WhatsApp com a mensagem pronta.
+   CHAT (Tawk.to): cole em tawk os dois códigos do seu painel (Administração > Canais > Chat Widget > Direct Chat Link:
+   https://tawk.to/chat/PROPERTYID/WIDGETID). Preenchidos, o botão "Tirar dúvidas" substitui o do WhatsApp. */
 var TATICA = {
   hotmart: { cbmpe: "https://pay.hotmart.com/I108461214L", pmpe: "https://pay.hotmart.com/I108452088F" },
   amostra: { cbmpe: "amostra-cbmpe.pdf", pmpe: "amostra-pmpe.pdf" },
-  whatsapp: "5581995444330"
+  whatsapp: "5581989934062",
+  tawk: { propertyId: "6af5db4dfeb2623c3f7e73cc", widgetId: "1k78619vn" },
+  chatOnline: true   /* true = "Atendimento online" com bolinha verde; false = "Deixe sua dúvida" (use quando não estiver respondendo) */
 };
 /* ======================================================================== */
 (function(){
@@ -663,6 +711,39 @@ var TATICA = {
   document.querySelectorAll("[data-avise]").forEach(function(a){ext(a,wa("Olá! Quero ser avisado quando o pacote "+a.dataset.avise+" for lançado."))});
   document.querySelectorAll(".cd[data-prova]").forEach(function(e){var p=e.dataset.prova.split("-"),d=new Date(+p[0],p[1]-1,+p[2]),h=new Date();h.setHours(0,0,0,0);
     var n=Math.round((d-h)/864e5); if(n>1)e.textContent="Faltam "+n+" dias para a prova"; else if(n===1)e.textContent="A prova é amanhã"; else if(n===0)e.textContent="A prova é hoje";});
+})();
+
+(function(){
+  var t=TATICA.tawk||{};
+  if(!(t.propertyId&&t.widgetId))return;               /* sem códigos: mantém o botão do WhatsApp */
+  var fab=document.getElementById("chatFab"),box=document.getElementById("chatBox"),wa=document.querySelector(".wa");
+  fab.hidden=false;
+  var on=TATICA.chatOnline!==false,nudge=document.getElementById("chatNudge");
+  if(!on){document.getElementById("cfT1").textContent="Deixe sua dúvida";document.getElementById("cfT2").textContent="Respondemos assim que possível";document.getElementById("cfDot").style.display="none";nudge.firstChild.nodeValue="Olá! Deixe sua dúvida e respondemos assim que possível."}
+  function nudgeOff(){nudge.hidden=true}
+  document.getElementById("nudgeX").addEventListener("click",function(e){e.stopPropagation();nudgeOff()});
+  nudge.addEventListener("click",function(){nudgeOff();abrir()});
+  var visto=false;try{visto=sessionStorage.getItem("tat_nudge")==="1"}catch(e){}
+  if(!visto){setTimeout(function(){if(box.hidden&&!carregado&&!fab.hidden){nudge.hidden=false;try{sessionStorage.setItem("tat_nudge","1")}catch(e){}setTimeout(nudgeOff,14000)}},6000)}
+  var carregado=false;
+  function abrir(){box.hidden=false;nudgeOff()}
+  function fechar(){box.hidden=true}
+  function iniciar(){
+    fechar();
+    if(carregado){ if(window.Tawk_API&&window.Tawk_API.maximize)window.Tawk_API.maximize(); return; }
+    carregado=true; fab.hidden=true;
+    window.Tawk_API=window.Tawk_API||{}; window.Tawk_LoadStart=new Date();
+    window.Tawk_API.onLoad=function(){window.Tawk_API.maximize()};
+    var s=document.createElement("script"); s.async=true;
+    s.src="https://embed.tawk.to/"+encodeURIComponent(t.propertyId)+"/"+encodeURIComponent(t.widgetId);
+    s.charset="UTF-8"; s.setAttribute("crossorigin","*"); document.head.appendChild(s);
+  }
+  fab.addEventListener("click",function(){box.hidden?abrir():fechar()});
+  document.getElementById("chatX").addEventListener("click",fechar);
+  document.getElementById("chatGo").addEventListener("click",iniciar);
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")fechar()});
+  document.querySelectorAll("[data-chat]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();abrir()})});
+  document.getElementById("chatPriv").addEventListener("click",function(e){e.preventDefault();var d=document.getElementById("privacidade");d.open=true;d.scrollIntoView({behavior:"smooth",block:"start"});fechar()});
 })();
 </script>
 </body>
